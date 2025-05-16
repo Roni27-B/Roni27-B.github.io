@@ -2,17 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Law Firm FAQ Chatbot (Inline FAQ)</title>
   <style>
     body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; }
     #chat-container { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; }
-    .message { margin: 10px 0; max-width: 70%; padding: 10px 15px; border-radius: 12px; line-height: 1.4; }
+    .message { margin: 10px 0; max-width: 80%; padding: 10px 15px; border-radius: 12px; line-height: 1.4; }
     .from-user { background: #007bff; color: #fff; align-self: flex-end; }
     .from-bot { background: #e9ecef; color: #333; align-self: flex-start; }
     #input-area { display: flex; padding: 10px; background: #fff; border-top: 1px solid #ddd; }
     #user-input { flex: 1; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 6px; }
     #send-btn { margin-left: 10px; padding: 0 20px; font-size: 16px; border: none; border-radius: 6px; background: #28a745; color: #fff; cursor: pointer; }
     #send-btn:disabled { opacity: 0.6; cursor: default; }
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+          body {
+            font-size: 14px;
+          }
+          .message {
+            padding: 8px 12px;
+          }
+          #input-area {
+            flex-direction: column;
+          }
+          #send-btn {
+            margin: 8px 0 0;
+            width: 100%;
+          }
+        }
   </style>
 </head>
 <body>
